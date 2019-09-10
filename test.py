@@ -21,17 +21,18 @@ class My_test:
 
     def test3(self):
         test1 = PowerSet()
-        for i in range(30):
+        for i in range(31):
             test1.put(i)
         test1.print_set()
         test1.put(222)
         test2 = PowerSet()
-        for i in range(10,40):
+        for i in range(20,40):
             test2.put(i)
         test2.print_set()
         print('__________________')
         res = test1.intersection(test2)
         res.print_set()
+        print(type(res))
 
     def test4(self):
         test1 = PowerSet()
@@ -46,6 +47,7 @@ class My_test:
         print('__________________')
         res = test1.intersection(test2)
         res.print_set()
+        print(type(res))
 
     def test5(self):
         test1 = PowerSet()
@@ -115,4 +117,6 @@ class My_test:
         print(test1.issubset(test2))
 
 test = My_test()
-test.test10()
+test.test3()
+print('************************')
+test.test4()

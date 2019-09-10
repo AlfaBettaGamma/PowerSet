@@ -30,14 +30,9 @@ class PowerSet:
 
     def intersection(self, set2):
         result = PowerSet()
-        if self.size() > set2.size():
-            for i in set2.slot:
-                if self.get(i) is True:
-                    result.put(i)
-        else:
-            for i in set2.slot:
-                if set2.get(i) is True:
-                    result.put(i)
+        for i in self.slot:
+            if set2.get(i) is True:
+                result.put(i)
         # пересечение текущего множества и set2
         return result
 
